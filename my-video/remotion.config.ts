@@ -7,5 +7,5 @@ import { Config } from "@remotion/cli/config";
 import { webpackOverride } from "./src/remotion/webpack-override.mjs";
 
 Config.setVideoImageFormat("jpeg");
-
 Config.overrideWebpackConfig(webpackOverride);
+Config.setBrowserExecutable("/tmp/chrome-shell/chrome-headless-shell-linux64/chrome-headless-shell");

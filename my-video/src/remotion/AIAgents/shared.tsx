@@ -1,10 +1,16 @@
-import { loadFont } from "@remotion/google-fonts/Inter";
-import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { loadFont } from "@remotion/fonts";
+import { interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 
-export const { fontFamily } = loadFont("normal", {
-  weights: ["400", "600", "800"],
-  subsets: ["latin"],
+// Load Inter as a local variable font (all weights in one file)
+loadFont({
+  family: "Inter",
+  url: staticFile("fonts/Inter-Regular.woff2"),
+  weight: "100 900",
+  style: "normal",
+  display: "block",
 });
+
+export const fontFamily = "Inter";
 
 // Color palette
 export const COLORS = {

@@ -1,8 +1,9 @@
-import { fontFamily, loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/fonts";
 import {
   AbsoluteFill,
   Sequence,
   spring,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -12,10 +13,15 @@ import { NextLogo } from "./NextLogo";
 import { Rings } from "./Rings";
 import { TextFade } from "./TextFade";
 
-loadFont("normal", {
-  subsets: ["latin"],
-  weights: ["400", "700"],
+loadFont({
+  family: "Inter",
+  url: staticFile("fonts/Inter-Regular.woff2"),
+  weight: "100 900",
+  style: "normal",
+  display: "block",
 });
+
+const fontFamily = "Inter";
 export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

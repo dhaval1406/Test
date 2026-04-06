@@ -10,6 +10,7 @@
   "dependencies": {
     "@remotion/bundler": "4.0.445",
     "@remotion/cli": "4.0.445",
+    "@remotion/fonts": "4.0.445",
     "@remotion/google-fonts": "4.0.445",
     "@remotion/lambda": "4.0.445",
     "@remotion/paths": "4.0.445",
